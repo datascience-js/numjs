@@ -1,4 +1,4 @@
 numjs
 =====
 
-Fast numerical manipulation in JavaScript
+Work in progress
