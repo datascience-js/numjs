@@ -23,8 +23,7 @@ To ensure a consistent code base - please keep these in mind when working. They 
   * Indentation is 4 spaces, lines should be shorter than 115 characters.
   * When applicable, prefer promises to callbacks to convey asynchronous actions.
   * Do not place mutable properties on any objects' prototype.
-  * Do not allocate closures when they a - [Commit Message Guidelines](#commit)
-re avoidable. 
+  * Do not allocate closures when they are avoidable. 
   * Prefer simple objects and using `this` rather than complex closures. Private variables should be prefixed with `_` rather than kept in closure scope. This is again - mainly for performance and consistency reasons.
   * Avoid long inheritance chains.
   * Do not namespace your code.
