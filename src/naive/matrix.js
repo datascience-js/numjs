@@ -136,34 +136,31 @@ class Matrix {
 	minor(row, col) {
 		var rows = this.data.length;
 		var cols = this.data[0].length;
+		if (row > rows || col > cols || row < 0 || col < 0) {
+			return;
+		}
 
-		if (row <= rows && col <= cols) {
-			var minorRow = 0;
-			var minorCol = 0;
-			var arr = new Array(rows - 1);
+		var minorRow = 0;
+		var minorCol = 0;
+		var arr = new Array(rows - 1);
 
-			for (var i = 0; i < rows; i++) {
-				if (i == row) {
-					continue;
-				}
+		for (var i = 0; i < rows; i++) {
+			if (i == row) continue;
+			//go back to first col upon reaching a new row
+			minorCol = 0;
+			arr[minorRow] = new Array(cols-1);
+			var matrixRow = this.row(i);
+			for (var j = 0; j < cols; j++) {
+				if (j == col) continue;
 
-				minorCol = 0; //go back to first col upon reaching a new row
-				arr[minorRow] = new Array(cols-1);
-				var matrixRow = this.row(i);
-				for (var j = 0; j < cols; j++) {
-					if (j == col) {
-						continue;
-					}
-
-					arr[minorRow][minorCol] = matrixRow[j];
-					minorCol++;
-				}
-
-				minorRow++;
+				arr[minorRow][minorCol] = matrixRow[j];
+				minorCol++;
 			}
 
-			return Matrix.fromArray(arr);
+			minorRow++;
 		}
+
+		return Matrix.fromArray(arr);
 	}
 }
 

@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d2b3191c-8280-472d-aedc-cc000aa92a3f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/naive/matrix.js" afterPath="$PROJECT_DIR$/src/naive/matrix.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/numjs.js" afterPath="$PROJECT_DIR$/src/numjs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="numjs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,20 +26,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="matrix.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="matrix.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/naive/matrix.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2856" max-vertical-offset="3744">
-              <caret line="157" column="58" selection-start-line="157" selection-start-column="58" selection-end-line="157" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.6571429" vertical-offset="2406" max-vertical-offset="3690">
+              <caret line="149" column="25" selection-start-line="149" selection-start-column="25" selection-end-line="149" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="numjs.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="numjs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/numjs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7285714" vertical-offset="0" max-vertical-offset="468">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
               <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
               <folding />
             </state>
@@ -69,8 +67,8 @@
         <option value="$PROJECT_DIR$/samples/sampleList" />
         <option value="$PROJECT_DIR$/samples/determinantCalculator.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
-        <option value="$PROJECT_DIR$/src/naive/matrix.js" />
         <option value="$PROJECT_DIR$/src/numjs.js" />
+        <option value="$PROJECT_DIR$/src/naive/matrix.js" />
       </list>
     </option>
   </component>
@@ -338,10 +336,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/naive/matrix.js">
+    <entry file="file://$PROJECT_DIR$/src/numjs.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2856" max-vertical-offset="3744">
-          <caret line="157" column="58" selection-start-line="157" selection-start-column="58" selection-end-line="157" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="468">
+          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -354,10 +352,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/numjs.js">
+    <entry file="file://$PROJECT_DIR$/src/naive/matrix.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7285714" vertical-offset="0" max-vertical-offset="468">
-          <caret line="17" column="45" selection-start-line="17" selection-start-column="45" selection-end-line="17" selection-end-column="45" />
+        <state vertical-scroll-proportion="0.6571429" vertical-offset="2406" max-vertical-offset="3690">
+          <caret line="149" column="25" selection-start-line="149" selection-start-column="25" selection-end-line="149" selection-end-column="25" />
           <folding />
         </state>
       </provider>
