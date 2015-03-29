@@ -124,10 +124,10 @@ class Matrix {
 		}
 		return str + '}';
 	}
-	toArray() {
-		var rows = this.data.length;
-		var cols = this.data[0].length;
-	}
+	//toArray() {
+	//	var rows = this.data.length;
+	//	var cols = this.data[0].length;
+	//}
 }
 
 Matrix.eye = function(size){
