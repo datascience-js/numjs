@@ -1,5 +1,5 @@
 // naive matrix implementation
-class Matrix{
+class Matrix {
 	constructor(w,h){
 		// data should be stored in initial slots, attributes 
 		// should be cached to take less slots, arrays are expensive
@@ -8,12 +8,18 @@ class Matrix{
 			this.data[i] = new Array(w);
 		}
 	}
+	shape(){
+		return [this.data.length, this.data[0].length];
+	}
+
 	set(x,y,v){
 		this.data[x][y]=v;
 	}
+	
 	at(x,y){
 		return this.data[x][y];
 	}
+	
 	add(other){
 		var m = new Matrix(this.data.length, this.data[0].length);
 		for(var i = 0; i < this.data.length;i++){
@@ -22,6 +28,32 @@ class Matrix{
 			}
 		}
 		return m;
+	}
+	clone(){
+		var [width, height] = this.shape();
+		var m = new Matrix(width, height);
+		for(var i = 0; i < width; i++){
+			for(var j = 0; j < height; j++){
+				m.data[i][j] = this.data[i][j];
+			}
+		}
+		return m;
+	}
+	pow(n){
+		// this is so naive I'm offended, not even squaring
+		var m = this.clone();
+		for(var i = 0; i < n; i++){
+			var m = m.mul(this);
+		}
+		return m;
+	}
+	smul(scalar){
+		var m = new Matrix(this.data.length, this.data[0].length);
+		for(var i = 0; i < this.data.length; i++){
+			for(var j = 0; j < this.data[0].length; j++){
+				m.data[i][j] = this.data[i][j] * scalar;
+			}
+		}
 	}
 	mul(other){
 		// this should definitely be at least Strassen
@@ -34,9 +66,11 @@ class Matrix{
 		}
 		return m;
 	}
+	
 	row(i){
 		return this.data[i];
 	}
+	
 	col(j){
 		var column = new Array(this.data[0].length);
 		for(var i = 0; i < this.data[0].length; i++){
@@ -44,6 +78,7 @@ class Matrix{
 		}
 		return column;
 	}
+	
 	transpose(){
 		var m = new Matrix(this.data.length, this.data[0].length);
 		for(var i = 0; i < this.data.length; i++){
@@ -53,6 +88,7 @@ class Matrix{
 		}
 		return m;
 	}
+	
 	sub(other){
 		var m = new Matrix(this.data.length, this.data[0].length);
 		for(var i = 0; i < this.data.length;i++){
@@ -68,7 +104,16 @@ class Matrix{
 		}
 		return m;
 	}
-
+	sum(){
+		let [width, height] = this.shape();
+		let sum = 0;
+		for(let i = 0; i < width; i++){
+			for(let j = 0; j < height; j++){
+				sum += this.data[i][j];
+			}
+		}
+		return num;
+	}
 }
 
 Matrix.eye = function(size){
@@ -81,7 +126,6 @@ Matrix.eye = function(size){
 	}
 	return m;
 };
-
 Matrix.zeros = function(size){
 	var m = new Matrix(size, size);
 	for(var i = 0; i < size; i++){
@@ -91,4 +135,5 @@ Matrix.zeros = function(size){
 	}
 	return m;
 };
+
 export default Matrix;
