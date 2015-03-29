@@ -115,19 +115,56 @@ class Matrix {
 		return num;
 	}
 	toString(){
+		var rows = this.data.length;
 		var str = '{';
-		for (var i = 0; i < this.data.length; i++) {
-			str += "[" + this.data[i].toString() + "]";
-			if (i < this.data.length - 1) {
+		for (var i = 0; i < rows; i++) {
+			str += "[" + this.row(i).toString() + "]";
+			if (i < rows - 1) {
 				str += ",";
 			}
 		}
 		return str + '}';
 	}
-	//toArray() {
-	//	var rows = this.data.length;
-	//	var cols = this.data[0].length;
-	//}
+	toArray() {
+		var rows = this.data.length;
+		var arr = new Array(rows);
+		for (var i = 0; i < rows; i++) {
+			arr[i] = this.row(i);
+		}
+		return arr;
+	}
+	minor(row, col) {
+		var rows = this.data.length;
+		var cols = this.data[0].length;
+
+		if (row <= rows && col <= cols) {
+			var minorRow = 0;
+			var minorCol = 0;
+			var arr = new Array(rows - 1);
+
+			for (var i = 0; i < rows; i++) {
+				if (i == row) {
+					continue;
+				}
+
+				minorCol = 0; //go back to first col upon reaching a new row
+				arr[minorRow] = new Array(cols-1);
+				var matrixRow = this.row(i);
+				for (var j = 0; j < cols; j++) {
+					if (j == col) {
+						continue;
+					}
+
+					arr[minorRow][minorCol] = matrixRow[j];
+					minorCol++;
+				}
+
+				minorRow++;
+			}
+
+			return Matrix.fromArray(arr);
+		}
+	}
 }
 
 Matrix.eye = function(size){
