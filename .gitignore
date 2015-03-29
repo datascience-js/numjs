@@ -27,5 +27,10 @@ node_modules
 # Users Environment Variables
 .lock-wscript
 
+<<<<<<< HEAD
 #idea folder
 .idea
+=======
+# Webstorm
+.idea
+>>>>>>> 9f457fec18c104bd9807ec545eb1eb540d2ef797
