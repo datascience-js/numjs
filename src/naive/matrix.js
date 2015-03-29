@@ -1,6 +1,6 @@
 // naive matrix implementation
 class Matrix {
-	constructor(w,h){
+	constructor(h,w){
 		// data should be stored in initial slots, attributes 
 		// should be cached to take less slots, arrays are expensive
 		this.data = new Array(h);
@@ -185,9 +185,9 @@ Matrix.zeros = function(size){
 
 Matrix.fromArray = function(arr) {
 	//TODO: check input is valid (non zero size array etc.)
-	if (arr[0] && arr[1]) {
-		var rows = arr[0].length;
-		var cols = arr[1].length;
+	if (arr && arr[0]) {
+		var rows = arr.length;
+		var cols = arr[0].length;
 		var m = new Matrix(rows, cols);
 		for (var i = 0; i < rows; i++) {
 			m.data[i] = arr[i];
