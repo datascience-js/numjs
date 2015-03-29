@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/NumJS.iml" filepath="$PROJECT_DIR$/.idea/NumJS.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/numjs.iml" filepath="$PROJECT_DIR$/.idea/numjs.iml" />
+>>>>>>> 7607fd3d89fb0a241a84f3cffaf6d403099848c2
     </modules>
   </component>
 </project>
