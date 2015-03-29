@@ -1,0 +1,28 @@
+{
+  "name": "numjs",
+  "version": "0.1.0",
+  "description": "Fast numerical calculations in JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datascience-js/numjs"
+  },
+  "keywords": [
+    "matrix",
+    "vector",
+    "math"
+  ],
+  "author": "HUJI",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/datascience-js/numjs/issues"
+  },
+  "homepage": "https://github.com/datascience-js/numjs",
+  "dependencies": {
+    "babel": "^4.7.16",
+    "bluebird": "^2.9.18"
+  }
+}
