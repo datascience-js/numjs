@@ -34,11 +34,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matrix.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="matrix.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/naive/matrix.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.096045196" vertical-offset="0" max-vertical-offset="2448">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="13" />
+            <state vertical-scroll-proportion="-4.0689654" vertical-offset="69" max-vertical-offset="2448">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -64,11 +64,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gaussian_elimination.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="gaussian_elimination.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/samples/gaussian_elimination.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-              <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.44386423" vertical-offset="0" max-vertical-offset="391">
+              <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -93,8 +93,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/samples/Perceptron.js" />
         <option value="$PROJECT_DIR$/samples/perceptron.js" />
-        <option value="$PROJECT_DIR$/samples/gaussian_elimination.js" />
         <option value="$PROJECT_DIR$/src/numjs.js" />
+        <option value="$PROJECT_DIR$/samples/gaussian_elimination.js" />
       </list>
     </option>
   </component>
@@ -374,18 +374,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/samples/gaussian_elimination.js">
+    <entry file="file://$PROJECT_DIR$/src/naive/matrix.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state vertical-scroll-proportion="-4.0689654" vertical-offset="69" max-vertical-offset="2448">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/naive/matrix.js">
+    <entry file="file://$PROJECT_DIR$/samples/gaussian_elimination.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.096045196" vertical-offset="0" max-vertical-offset="2448">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.44386423" vertical-offset="0" max-vertical-offset="391">
+          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
           <folding />
         </state>
       </provider>
