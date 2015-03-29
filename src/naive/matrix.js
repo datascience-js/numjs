@@ -146,13 +146,12 @@ class Matrix {
 
 		for (var i = 0; i < rows; i++) {
 			if (i == row) continue;
-			//go back to first col upon reaching a new row
-			minorCol = 0;
+			minorCol = 0; //go back to first col upon reaching a new row
 			arr[minorRow] = new Array(cols-1);
 			var matrixRow = this.row(i);
+
 			for (var j = 0; j < cols; j++) {
 				if (j == col) continue;
-
 				arr[minorRow][minorCol] = matrixRow[j];
 				minorCol++;
 			}
