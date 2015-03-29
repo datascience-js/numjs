@@ -1,5 +1,14 @@
 import Matrix from "./naive/matrix";
 
-var m = Matrix.zeros(2, 2);
-m.set(0,1,3);
-m = m.transpose();
+function bullshit() {
+    var arr = new Array(3);
+    for (var i = 0; i < 3; i++) {
+        arr[i] = [3,1,1];
+    }
+
+    var m = Matrix.fromArray(arr);
+    console.log("array: " + arr.toString());
+    console.log("matrix: " + m.toString());
+}
+
+bullshit();
