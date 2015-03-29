@@ -1,7 +1,7 @@
 //naive 3x3 matrix determinant calculator
 import Matrix from "../src/naive/matrix"
 
-var determinant = function(matrix) {
+export function determinant(matrix) {
     if (!matrix) return;
     var matrixDim = matrix.shape();
     if (matrixDim[0] != matrixDim[1]) return;
@@ -26,7 +26,7 @@ var determinant = function(matrix) {
     }
 
     return det;
-};
+}
 
 
 
