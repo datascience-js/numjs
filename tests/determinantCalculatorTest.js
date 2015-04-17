@@ -69,22 +69,16 @@ describe("Determinant function tests", () => {
     });
 
     it("6x6 matrix should return 253165", () => {
-        let matrix = Matrix.fromArray([[1,5,10,1,5,6],[20,2,3,5,1,10],[100,-1,-4,10,-3,-4],[9,-50,-300,16,-10,-5],[1,2,5,7,7,8],[2,1,2,1,8,10]]);
+        let matrix = Matrix.fromArray([[1,5,10,1,5,6],[20,2,3,5,1,10],[100,-1,-4,10,-3,-4],
+            [9,-50,-300,16,-10,-5],[1,2,5,7,7,8],[2,1,2,1,8,10]]);
         assert.equal(determinant(matrix), 40084623);
     });
 
-    //it("100x100 matrix should return 0", () => {
-    //    let array = new Array(10);
-    //    for (let i = 0; i < 10; i++) {
-    //        let row = new Array(10);
-    //        for (let j = 0; j < 10; j++) {
-    //            row[j] = i*j + i + j + 5*i*j;
-    //        }
-    //        array[i] = row;
-    //    }
-    //    let matrix = Matrix.fromArray(array);
-    //    assert.equal(determinant(matrix), 0);
-    //});
+    it("6x6 matrix should return 253165", () => {
+        let matrix = Matrix.fromArray([[1,5,10,1,5,6],[20,2,3,5,1,10],[100,-1,-4,10,-3,-4],
+            [9,-50,-300,16,-10,-5],[1,2,5,7,7,8],[2,1,2,1,8,10]]);
+        assert.equal(determinant(matrix), 40084623);
+    });
 
 
 });
