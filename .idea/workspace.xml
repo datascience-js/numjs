@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="6c29152a-b36c-44dc-a506-666856e11071" name="Default" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/determinantCalculator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/runbabel.cmd" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/gaussian_elimination.js" afterPath="$PROJECT_DIR$/samples/gaussian_elimination.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/naive/matrix.js" afterPath="$PROJECT_DIR$/src/naive/matrix.js" />
