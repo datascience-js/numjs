@@ -30,7 +30,7 @@ class Vector {
 	dot(other){
 		let sum = 0;
 		for(var i = 0; i < this.len; i++){
-			sum += this[i] + other[i];
+			sum += this[i] * other[i];
 		}
 		return sum;
 	}
