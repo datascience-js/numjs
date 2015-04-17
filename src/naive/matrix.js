@@ -173,10 +173,14 @@ Matrix.eye = function(size){
 	}
 	return m;
 };
-Matrix.zeros = function(size){
-	var m = new Matrix(size, size);
+Matrix.zeros = function(size, rsize){
+	var m;
+	if (!rsize){
+		rsize = size;
+	}
+	m = new Matrix(size, rsize);
 	for(var i = 0; i < size; i++){
-		for(var j = 0; j < size; j++){
+		for(var j = 0; j < rsize; j++){
 			m.data[i][j] = 0.0;
 		}
 	}

@@ -62,9 +62,17 @@ m.set(2,2,2);
 //var res = calc(m, [4,2, 36]);
 
 
-var res = calc(m, [8,-11,-3]);
+//var res = calc(m, [8,-11,-3]);
+
 console.log(m.toString());
-console.log(res);
+m.setCol(0, 5);
+m.setCol(1, 9);
+m.getCol(0);
+m.getCol(1);
+
+m.setRow(2, 99);
+m.getRow(2);
+//console.log(res);
 
 
 //=======

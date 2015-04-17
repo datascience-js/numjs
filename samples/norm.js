@@ -1,5 +1,4 @@
 import Matrix from "../src/naive/matrix";
-import Vector from "../src/naive/vector";
 
 /**
  * Calculate the (frobenius) norm of a given matrix

@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6c29152a-b36c-44dc-a506-666856e11071" name="Default" comment="Create function which calculate the norm of given matrix">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/samples/norm.js" />
+    <list default="true" id="6c29152a-b36c-44dc-a506-666856e11071" name="Default" comment="Add gram schmidt algorithm">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/naive/matrix.js" afterPath="$PROJECT_DIR$/src/naive/matrix.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/samples/norm.js" afterPath="$PROJECT_DIR$/samples/norm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/numjs.js" afterPath="$PROJECT_DIR$/src/numjs.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/naive/vector.js" afterPath="$PROJECT_DIR$/src/naive/vector.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="NumJS.iws" />
@@ -30,18 +33,18 @@
       <file leaf-file-name="numjs.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/numjs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
-              <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1649">
+              <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="norm.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="norm.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/samples/norm.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6449086" vertical-offset="76" max-vertical-offset="459">
-              <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -50,18 +53,18 @@
       <file leaf-file-name="gaussian_elimination.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/samples/gaussian_elimination.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1768">
-              <caret line="55" column="9" selection-start-line="51" selection-start-column="5" selection-end-line="55" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matrix.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="matrix.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/naive/matrix.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3468">
-              <caret line="11" column="54" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.33159268" vertical-offset="604" max-vertical-offset="3536">
+              <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -70,8 +73,18 @@
       <file leaf-file-name="vector.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/naive/vector.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="833">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gram_schmidt.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/samples/gram_schmidt.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="433" max-vertical-offset="884">
+              <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -91,9 +104,11 @@
         <option value="$PROJECT_DIR$/runbabel.cmd" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/samples/gaussian_elimination.js" />
-        <option value="$PROJECT_DIR$/src/naive/matrix.js" />
-        <option value="$PROJECT_DIR$/src/numjs.js" />
         <option value="$PROJECT_DIR$/samples/norm.js" />
+        <option value="$PROJECT_DIR$/src/naive/vector.js" />
+        <option value="$PROJECT_DIR$/src/naive/matrix.js" />
+        <option value="$PROJECT_DIR$/samples/gram_schmidt.js" />
+        <option value="$PROJECT_DIR$/src/numjs.js" />
       </list>
     </option>
   </component>
@@ -161,6 +176,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NumJS" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="numjs" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="node_modules" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -293,6 +326,19 @@
       <option name="number" value="Default" />
       <updated>1427613527915</updated>
     </task>
+    <task id="LOCAL-00001" summary="Create function which calculate the norm of given matrix">
+      <created>1429261941732</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1429261941732</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Fix dot function of vector">
+      <created>1429264834068</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1429264834068</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -356,7 +402,9 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="Create function which calculate the norm of given matrix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create function which calculate the norm of given matrix" />
+    <MESSAGE value="Fix dot function of vector" />
+    <MESSAGE value="Add gram schmidt algorithm" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add gram schmidt algorithm" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -381,14 +429,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/naive/vector.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -441,34 +481,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/numjs.js">
+    <entry file="file://$PROJECT_DIR$/samples/norm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1513">
-          <caret line="3" column="14" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/samples/gaussian_elimination.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1768">
-          <caret line="55" column="9" selection-start-line="51" selection-start-column="5" selection-end-line="55" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1768">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/naive/vector.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="833">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/samples/gram_schmidt.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="433" max-vertical-offset="884">
+          <caret line="46" column="48" selection-start-line="46" selection-start-column="48" selection-end-line="46" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/numjs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1088" max-vertical-offset="1649">
+          <caret line="73" column="12" selection-start-line="73" selection-start-column="12" selection-end-line="73" selection-end-column="12" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/naive/matrix.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3468">
-          <caret line="11" column="54" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/samples/norm.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6449086" vertical-offset="76" max-vertical-offset="459">
-          <caret line="19" column="1" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.33159268" vertical-offset="604" max-vertical-offset="3536">
+          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
           <folding />
         </state>
       </provider>

@@ -34,6 +34,11 @@ class Vector {
 		}
 		return sum;
 	}
-	
+
+	zeros(){
+		for(var i = 0; i < this.len; i++){
+			this[i] = 0;
+		}
+	}
 }
 export default Vector;
