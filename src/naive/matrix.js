@@ -1,6 +1,6 @@
 // naive matrix implementation
 class Matrix {
-	constructor(w,h){
+	constructor(h, w){
 		// data should be stored in initial slots, attributes 
 		// should be cached to take less slots, arrays are expensive
 		this.data = new Array(h);
@@ -30,10 +30,10 @@ class Matrix {
 		return m;
 	}
 	clone(){
-		var [width, height] = this.shape();
-		var m = new Matrix(width, height);
-		for(var i = 0; i < width; i++){
-			for(var j = 0; j < height; j++){
+		var [height, width] = this.shape();
+		var m = new Matrix(height, width);
+		for(var i = 0; i < height; i++){
+			for(var j = 0; j < width; j++){
 				m.data[i][j] = this.data[i][j];
 			}
 		}
@@ -114,6 +114,20 @@ class Matrix {
 		}
 		return num;
 	}
+	toString(){
+		var str = '{';
+		for (var i = 0; i < this.data.length; i++) {
+			str += "[" + this.data[i].toString() + "]";
+			if (i < this.data.length - 1) {
+				str += ",";
+			}
+		}
+		return str + '}';
+	}
+	//toArray() {
+	//	var rows = this.data.length;
+	//	var cols = this.data[0].length;
+	//}
 }
 
 Matrix.eye = function(size){
@@ -134,6 +148,19 @@ Matrix.zeros = function(size){
 		}
 	}
 	return m;
+};
+
+Matrix.fromArray = function(arr) {
+	//TODO: check input is valid (non zero size array etc.)
+	if (arr[0] && arr[1]) {
+		var rows = arr[0].length;
+		var cols = arr[1].length;
+		var m = new Matrix(rows, cols);
+		for (var i = 0; i < rows; i++) {
+			m.data[i] = arr[i];
+		}
+		return m;
+	}
 };
 
 export default Matrix;
