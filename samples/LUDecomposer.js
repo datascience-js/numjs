@@ -2,23 +2,42 @@
 import Matrix from "../src/naive/matrix"
 
 export function luDecompose(A) {
-    let dim = matrix.shape();
+    let dim = A.shape();
+
     if (dim[0] != dim[1]) {
         return;
     }
 
     let L = Matrix.zeros(dim[0]);
     let U = Matrix.zeros(dim[0]);
-    let P = pivotize(matrix);
+    let P = pivotize(A);
     let A2 = P.mul(A);
 
-    for (var j=0; j<dim[0]; j++) {
+    for (let j=0; j<dim[0]; j++) {
+        let sum1 = 0;
+        let sum2 = 0;
         L.set(j, j, 1.0);
 
+        for (let i=0; i<j+1; i++) {
+            for (let k=0; k<i; k++) {
+                sum1 += (U.at(k,j) * L.at(i,k));
+            }
+
+            let val = A2.at(i,j) - sum1;
+            U.set(i, val);
+        }
+
+        for (let i=j; i<dim[0]; i++) {
+            for (let k = 0; k < j; k++) {
+                sum2 += (U.at(k,j) * L.at(i,k));
+            }
+
+            let val = (A2.at(i,j) - sum2) / U.at(j,j);
+            L.set(i,j,val);
+        }
     }
 
-
-
+    return [L,U,P];
 }
 
 function pivotize(matrix) {
@@ -28,10 +47,9 @@ function pivotize(matrix) {
         let row = getMax(matrix, j);
         if (j != row) {
             //swap the rows
-
-
-
-            idMat.data[row] =  [idMat.data[j], idMat.data[row] = idMat.data[j]][0];
+            let temp = idMat.getRow(row);
+            idMat.setRow(row, idMat.getRow(j));
+            idMat.setRow(j, temp);
         }
     }
 
