@@ -1,7 +1,7 @@
 // naive matrix implementation
 class Matrix {
-	constructor(h, w){
-		// data should be stored in initial slots, attributes 
+	constructor(w,h){
+		// data should be stored in initial slots, attributes
 		// should be cached to take less slots, arrays are expensive
 		this.data = new Array(h);
 		for(var i = 0; i < h; i++){
@@ -115,19 +115,52 @@ class Matrix {
 		return num;
 	}
 	toString(){
+		var rows = this.data.length;
 		var str = '{';
-		for (var i = 0; i < this.data.length; i++) {
-			str += "[" + this.data[i].toString() + "]";
-			if (i < this.data.length - 1) {
+		for (var i = 0; i < rows; i++) {
+			str += "[" + this.row(i).toString() + "]";
+			if (i < rows - 1) {
 				str += ",";
 			}
 		}
 		return str + '}';
 	}
-	//toArray() {
-	//	var rows = this.data.length;
-	//	var cols = this.data[0].length;
-	//}
+	toArray() {
+		var rows = this.data.length;
+		var arr = new Array(rows);
+		for (var i = 0; i < rows; i++) {
+			arr[i] = this.row(i);
+		}
+		return arr;
+	}
+	minor(row, col) {
+		var rows = this.data.length;
+		var cols = this.data[0].length;
+		if (row > rows || col > cols || row < 0 || col < 0) {
+			return;
+		}
+
+		var minorRow = 0;
+		var minorCol = 0;
+		var arr = new Array(rows - 1);
+
+		for (var i = 0; i < rows; i++) {
+			if (i == row) continue;
+			minorCol = 0; //go back to first col upon reaching a new row
+			arr[minorRow] = new Array(cols-1);
+			var matrixRow = this.row(i);
+
+			for (var j = 0; j < cols; j++) {
+				if (j == col) continue;
+				arr[minorRow][minorCol] = matrixRow[j];
+				minorCol++;
+			}
+
+			minorRow++;
+		}
+
+		return Matrix.fromArray(arr);
+	}
 }
 
 Matrix.eye = function(size){
@@ -152,9 +185,9 @@ Matrix.zeros = function(size){
 
 Matrix.fromArray = function(arr) {
 	//TODO: check input is valid (non zero size array etc.)
-	if (arr[0] && arr[1]) {
-		var rows = arr[0].length;
-		var cols = arr[1].length;
+	if (arr && arr[0]) {
+		var rows = arr.length;
+		var cols = arr[0].length;
 		var m = new Matrix(rows, cols);
 		for (var i = 0; i < rows; i++) {
 			m.data[i] = arr[i];
