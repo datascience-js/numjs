@@ -13,18 +13,42 @@ class Matrix {
 	}
 
 	set(x,y,v){
-		this.data[x][y]=v;
+		this.data[x][y] = v;
 	}
-	
+
+	setRow(i, val) {
+		this.data[i] = val;
+	}
+
+	setCol(j, vals) {
+		var height = this.shape()[0];
+		for (var i = 0; i < height; i++) {
+			this.data[i][j] = vals[i];
+		}
+	}
+
+	getRow(x) {
+		return this.data[x];
+	}
+
+	getCol(j) {
+		var col = [];
+		for (var i = 0; i < this.shape()[0]; i++) {
+			col.push(this.data[i][j]);
+		}
+
+		return col;
+	}
+
 	at(x,y){
 		return this.data[x][y];
 	}
-	
+
 	add(other){
 		var m = new Matrix(this.data.length, this.data[0].length);
 		for(var i = 0; i < this.data.length;i++){
 			for(var j = 0; j < this.data[0].length; j++){
-				m.data[i][j] = this.data[i][j] + other.data[i][j]; 
+				m.data[i][j] = this.data[i][j] + other.data[i][j];
 			}
 		}
 		return m;
@@ -61,16 +85,16 @@ class Matrix {
 		var m = new Matrix(this.data.length, this.data[0].length);
 		for(var i = 0; i < this.data.length;i++){
 			for(var j = 0; j < this.data[0].length; j++){
-				m.data[i][j] = this.data[i][j] + other.data[i][j]; 
+				m.data[i][j] = this.data[i][j] + other.data[i][j];
 			}
 		}
 		return m;
 	}
-	
+
 	row(i){
 		return this.data[i];
 	}
-	
+
 	col(j){
 		var column = new Array(this.data[0].length);
 		for(var i = 0; i < this.data[0].length; i++){
@@ -78,7 +102,7 @@ class Matrix {
 		}
 		return column;
 	}
-	
+
 	transpose(){
 		var m = new Matrix(this.data.length, this.data[0].length);
 		for(var i = 0; i < this.data.length; i++){
@@ -88,7 +112,7 @@ class Matrix {
 		}
 		return m;
 	}
-	
+
 	sub(other){
 		var m = new Matrix(this.data.length, this.data[0].length);
 		for(var i = 0; i < this.data.length;i++){
@@ -98,7 +122,7 @@ class Matrix {
 				var sum = 0;
 				for(var i = 0; i < row.length; i++){
 					sum += row[i] * col[j];
-				} 
+				}
 				m.data[i][j] = sum;
 			}
 		}
