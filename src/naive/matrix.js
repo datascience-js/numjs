@@ -21,9 +21,15 @@ class Matrix {
 	}
 
 	setCol(j, vals) {
-		var height = this.shape()[0];
+		var height = this.shape()[0], isValsArray = (vals instanceof Array);
+
 		for (var i = 0; i < height; i++) {
-			this.data[i][j] = vals[i];
+			if (isValsArray) {
+				this.data[i][j] = vals[i];
+			}
+			else{
+				this.data[i][j] = vals;
+			}
 		}
 	}
 
@@ -67,7 +73,7 @@ class Matrix {
 		// this is so naive I'm offended, not even squaring
 		var m = this.clone();
 		for(var i = 0; i < n; i++){
-			var m = m.mul(this);
+			m = m.mul(this);
 		}
 		return m;
 	}
@@ -120,8 +126,8 @@ class Matrix {
 				var row = this.data[i];
 				var col = other.col(j);
 				var sum = 0;
-				for(var i = 0; i < row.length; i++){
-					sum += row[i] * col[j];
+				for(var k = 0; k < row.length; k++){
+					sum += row[k] * col[k];
 				}
 				m.data[i][j] = sum;
 			}
@@ -197,14 +203,15 @@ Matrix.eye = function(size){
 	}
 	return m;
 };
-Matrix.zeros = function(size, rsize){
+Matrix.zeros = function(size, csize){
 	var m;
-	if (!rsize){
-		rsize = size;
+	if (!csize){
+		csize = size;
 	}
-	m = new Matrix(size, rsize);
+	m = new Matrix(size, csize);
+
 	for(var i = 0; i < size; i++){
-		for(var j = 0; j < rsize; j++){
+		for(var j = 0; j < csize; j++){
 			m.data[i][j] = 0.0;
 		}
 	}

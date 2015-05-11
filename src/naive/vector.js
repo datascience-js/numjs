@@ -40,5 +40,23 @@ class Vector {
 			this[i] = 0;
 		}
 	}
+
+	toArray(){
+		let arr = new Array(this.len);
+		for(let i = 0; i< this.len; i++){
+			arr[i] = this[i];
+		}
+		return arr;
+	}
 }
 export default Vector;
+
+Vector.scalarMul = function(c, vec){
+	let mulVec = new Vector(vec.len);
+	mulVec.zeros();
+
+	for (let j = 0; j < vec.len; j++){
+		mulVec[j] = c*vec[j];
+	}
+	return mulVec;
+};
