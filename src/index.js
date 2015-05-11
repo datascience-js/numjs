@@ -1,7 +1,7 @@
 console.log("Bootstrapping!");
 var Promise = require("bluebird");
 require("babel/register")({ 
-	experimental: true,
+	"stage" : 0,
 	optional: ["bluebirdCoroutines"],
 	sourceMap: "inline"
 });
